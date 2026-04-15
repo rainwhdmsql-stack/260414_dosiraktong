@@ -3,14 +3,38 @@
 @import url("modal.css");
 @import url("header.css");
 @import url("visual.css");
+@import url("service.css");
 @import url("about.css");
 @import url("business.css");
 @import url("footer.css");
 
 /* 공통 영역 */
-.inner{
-    width: 95%;
-    max-width: 1420px;
-    margin: auto;
-    background-color: red;
+.inner {
+  width: 95%;
+  max-width: 1420px;
+  margin: auto;
+  background-color: rgb(255, 215, 215);
+}
+
+/* 폰트 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+th,
+td,
+div,
+span,
+label,
+input,
+select,
+textarea,
+button,
+li,
+caption {
+  font-family: "Poppins", "Pretendard", sans-serif;
 }
