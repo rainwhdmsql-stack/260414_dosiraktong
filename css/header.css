@@ -1,4 +1,3 @@
-
 .header {
   position: fixed;
   top: 0;
@@ -17,7 +16,7 @@
 }
 /* 스크롤 될 때 헤더 변경 */
 .header.active {
-  height: 80px;
+  height: 70px;
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 10px 0 15px 0 rgba(0, 0, 0, 0.1);
 }
@@ -27,11 +26,11 @@
   background-size: cover;
 }
 /* 메뉴 변경 */
-.header.active .gnb > li > a{
+.header.active .gnb > li > a {
   color: #222;
 }
 /* 메뉴 밑줄 변경 */
-.header.active .gnb > li > a > span::after{
+.header.active .gnb > li > a > span::after {
   background-color: #222;
 }
 
@@ -94,5 +93,27 @@
 }
 /* 모바일 메뉴 */
 .nav-mb {
-  display: none;
+  /* display: none; */
+  width: 100%;
+  height: calc(100vh - 70px);
+  position: absolute;
+  top: 70px;
+  left: 100%;
+  background-color: #fff;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.nav-mb-gnb a {
+  display: flex;
+  align-items: center;
+  padding: 15px 70px 15px 40px;
+  font-size: 24px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e5e5e5;
+  padding-top: 50px;
+}
+.nav-mb.active{
+  left: 0%;
+  opacity: 1;
 }
