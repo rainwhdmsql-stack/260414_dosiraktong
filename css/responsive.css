@@ -91,15 +91,18 @@
   .inner {
     width: 90% !important;
   }
+
   .about-title {
     font-size: 24px;
   }
   .about-txt-main {
     font-size: 20px;
   }
+
   .busi-br {
     display: none;
   }
+  
   .business a img {
     width: 50%;
   }

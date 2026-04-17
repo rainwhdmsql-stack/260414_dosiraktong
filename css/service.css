@@ -1,9 +1,9 @@
 .service {
   position: relative;
-  height: 100vh;
+  height: auto;
   /* background-color: rgb(174, 216, 255); */
   /* min-width: 800px; */
-  margin: 180px 0 210px;
+  padding: 180px 0 210px;
 }
 .service.inner {
   height: 100%;
