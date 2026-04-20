@@ -7,12 +7,15 @@
   }
 }
 @media (max-width: 1024px) {
+  /* 상단 */
   .header {
     height: 70px;
   }
   .nav {
     display: none;
   }
+
+  /* 모바일 메뉴 */
   .mbt {
     position: relative;
     display: block;
@@ -56,6 +59,44 @@
   .mbt.ani span:nth-child(3) {
     transform: rotate(-45deg);
   }
+
+  /* visual */
+  .visual {
+    height: auto;
+    /* min-width: 800px; */
+  }
+  .visual-bg-1,
+  .visual-bg-2,
+  .visual-bg-3,
+  .visual-bg-4 {
+    background-position: left;
+  }
+
+  /* service */
+  .service {
+    padding: 70px 20px;
+  }
+  .service-wrap {
+    grid-template-columns: 1fr;
+  }
+  .service-box-1 {
+    grid-row: auto;
+    /* aspect-ratio: 35/34; */
+    max-width: 100%;
+  }
+
+  .service-title {
+    font-size: 30px;
+  }
+  .service-box-2,
+  .service-box-3 {
+    grid-row: auto; /* Grid 배치 초기화 */
+    aspect-ratio: 35/17; /* 모바일에서 원하는 비율로 고정 */
+    /* max-width: 100%; */
+  }
+  .service-bg {
+    padding: 30px;
+  }
   /* about */
   .about {
     margin-bottom: 100px;
@@ -79,14 +120,39 @@
   .about-link {
     margin: auto;
   }
+
   /* business */
   .business a h2 {
     font-size: 24px;
   }
   .business a p {
     font-size: 16px;
-  }`
+  }
+  .business-modal {
+    display: flex;
+  }
 }
+
+@media (max-width: 640px) {
+  .service-box-1 {
+    aspect-ratio: 70/33;
+  }
+  .service-box-1,
+  .service-box-2,
+  .service-box-3 {
+    background-size: cover;
+    grid-row: auto; /* Grid 배치 초기화 */
+    aspect-ratio: 16 / 9; /* 모바일에서 원하는 비율로 고정 */
+    max-width: 100%;
+  }
+  .footer-br {
+    display: block;
+  }
+  .footer-bar {
+    display: none;
+  }
+}
+
 @media (max-width: 480px) {
   .inner {
     width: 90% !important;
@@ -102,7 +168,7 @@
   .busi-br {
     display: none;
   }
-  
+
   .business a img {
     width: 50%;
   }
@@ -111,5 +177,29 @@
   }
   .sw-business a {
     padding: 25px 20px;
+  }
+
+  .business-modal {
+    height: 300px;
+  }
+  .business-modal img {
+    width: 70%;
+  }
+  .business-modal-inner {
+    top: 55%;
+    left: 55%;
+  }
+  .service {
+    padding: 70px 0px;
+  }
+  .service-title {
+    font-size: 24px;
+  }
+}
+@media (max-width: 390px) {
+  .service-box-1,
+  .service-box-2,
+  .service-box-3 {
+    aspect-ratio: 35 / 22;
   }
 }

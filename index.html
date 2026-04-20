@@ -90,8 +90,19 @@
     <script src="js/header.js"></script>
     <script src="js/business.js"></script>
 
+    <!-- waypoint -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"
+      integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- AOS css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 
     <!-- 타이틀 -->
     <title>도시락으로 다 통한다, 해외 데이터는 도시락통</title>
@@ -99,6 +110,9 @@
   <body>
     <!-- 안내 -->
     <!-- 위로가기 버튼 -->
+    <button class="gotop">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
     <div class="wrap">
       <!-- 상단 -->
       <header class="header">
@@ -175,7 +189,7 @@
           <h2 class="service-title"><span>도시락통</span> 서비스 둘러보기</h2>
           <!-- 서비스 이미지 영역 -->
           <div class="service-wrap">
-            <div class="service-box-1">
+            <div class="service-box-1" data-aos="flip-left">
               <a href="#">
                 <div class="service-bg service-bg-1"></div>
                 <div class="service-box-wrap">
@@ -191,7 +205,7 @@
                 </div>
               </a>
             </div>
-            <div class="service-box-2">
+            <div class="service-box-2" data-aos="flip-right" data-aos-delay="500">
               <a href="#">
                 <div class="service-bg service-bg-2"></div>
                 <div class="service-box-wrap">
@@ -207,7 +221,7 @@
                 </div>
               </a>
             </div>
-            <div class="service-box-3">
+            <div class="service-box-3" data-aos="flip-right" data-aos-delay="600">
               <a href="#">
                 <div class="service-bg service-bg-3"></div>
                 <div class="service-box-wrap">
@@ -229,7 +243,7 @@
       <!-- 소개 -->
       <section class="about">
         <div class="inner">
-          <h3 class="about-title" data-aos="fade-up" data-aos-duration="800">
+          <h3 class="about-title" data-aos="fade-up" data-aos-delay="800">
             통신 서비스를 하나로 <br />
             해외여행 갈 땐 <span>도시락통.</span>
           </h3>
@@ -273,14 +287,15 @@
 
       <!-- 비즈니스 -->
       <section class="business">
+        <!-- swiper -->
         <div class="swiper sw-business">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <a href="#" class="business-bg-1">
                 <h2>도시락멤버스</h2>
                 <p>
-                  하나의 ID로 도시락통의 모든 서비스를 <br class="busi-br"/>
-                  이용할 수 있는 통합멤버십. <br class="busi-br"/>
+                  하나의 ID로 도시락통의 모든 서비스를 <br class="busi-br" />
+                  이용할 수 있는 통합멤버십. <br class="busi-br" />
                   이용 할 수록 커지는 커지는 혜택을 확인해보세요!
                 </p>
                 <span>READ MORE</span>
@@ -291,8 +306,8 @@
               <a href="#" class="business-bg-2">
                 <h2>도시락톡</h2>
                 <p>
-                  로밍전화 요금 부담을 확 낮춰주는 <br class="busi-br"/>
-                  해외로밍전화 앱 서비스. <br class="busi-br"/>
+                  로밍전화 요금 부담을 확 낮춰주는 <br class="busi-br" />
+                  해외로밍전화 앱 서비스. <br class="busi-br" />
                   도시락톡끼리는 365일 무료통화 혜택까지!
                 </p>
                 <span>READ MORE</span>
@@ -303,8 +318,9 @@
               <a href="#" class="business-bg-3">
                 <h2>여행보험도시락</h2>
                 <p>
-                  방문국가, 나이 입력하고 보험료 미리보기 <br class="busi-br"/>커피 두 세잔
-                  값으로 보험료는 가볍게, <br class="busi-br"/>
+                  방문국가, 나이 입력하고 보험료 미리보기
+                  <br class="busi-br" />커피 두 세잔 값으로 보험료는 가볍게,
+                  <br class="busi-br" />
                   보장은 든든하게!
                 </p>
                 <span>READ MORE</span>
@@ -313,8 +329,37 @@
             </div>
           </div>
         </div>
+        <!-- business 모달 -->
+        <div class="business-modal">
+          <div class="business-modal-inner">
+            <img src="images/scroll_guide2.png" alt="scroll-guide" />
+          </div>
+        </div>
       </section>
       <!-- 하단 -->
+      <footer class="footer" id="footer">
+        <div class="inner">
+          <ul class="footer-list">
+            <li>
+              <span>상호 : ㈜와이드모바일<em class="footer-bar"></em></span>
+
+              <span
+                >통신판매업신고번호 : 제2018-서울서대문-0301호<em
+                  class="footer-bar"
+                ></em
+              ></span>
+
+              <span>사업자등록번호 : 121-81-66458</span>
+            </li>
+            <li>
+              고객센터 : <a href="tel:000-0000">1566-9070</a> (운영시간
+              9:00~18:00,<br class="footer-br" />
+              주말/공휴일/점심 12:00~13:00 제외)
+            </li>
+            <li><p>Copyright © WIDEMOBILE INC. Allright Reserved.</p></li>
+          </ul>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

@@ -19,4 +19,9 @@ window.addEventListener("load", () => {
       },
     },
   });
+  // business-modal
+  const businessModal = document.querySelector(".business-modal")
+  businessModal.addEventListener("click", ()=>{
+    businessModal.style.display = "none"
+  })
 });
