@@ -3,6 +3,13 @@ window.addEventListener("load", () => {
 
   const footer = document.querySelector(".footer");
   const gotop = document.querySelector(".gotop");
+  // gotop
+  gotop.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
 
   // 첫 번째 Waypoint: footer
   new Waypoint({
@@ -22,9 +29,9 @@ window.addEventListener("load", () => {
     element: document.querySelector(".service"),
     handler: function (direction) {
       if (direction === "down") {
-        gotop.classList.add("active")
+        gotop.classList.add("active");
       } else {
-        gotop.classList.remove("active")
+        gotop.classList.remove("active");
       }
     },
     offset: "88%",
