@@ -39,7 +39,8 @@ position: absolute;
   color: #f00;
   background: linear-gradient(to top, rgb(255, 210, 210) 50%, transparent 50%);
 }
-.modalClose i{
+.modalClose
+{display: inline-block;
 font-size: 12px;
 text-decoration: underline;
 cursor: pointer;
